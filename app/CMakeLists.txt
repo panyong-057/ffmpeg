@@ -35,14 +35,14 @@ add_library( # Sets the name of the library.
         src/main/cpp/audio_lame.c
         src/main/cpp/fast_start.c
         src/main/cpp/ffprobe_cmd.c
-        )
+        )#添加一个文件库
 
 add_library(ffmpeg
         SHARED
-        IMPORTED)
+        IMPORTED)#添加预编译库
 set_target_properties(ffmpeg
         PROPERTIES IMPORTED_LOCATION
-        ../../../../libs/${CMAKE_ANDROID_ARCH_ABI}/libffmpeg.so)
+        ../../../../libs/${CMAKE_ANDROID_ARCH_ABI}/libffmpeg.so)#添加预编译库
 
 add_library(mp3lame
         SHARED
@@ -53,8 +53,22 @@ set_target_properties(mp3lame
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=gnu++11")
 
-include_directories(src/main/cpp)
-include_directories(src/main/cpp/include)
+#设置可执行文件的输出路径（EXECUTABLE_OUTPUT_PATH是全局变量）
+#set(EXECUTABLE_OUTPUT_PATH [output_path])
+
+#设置库文件的输出路径(LIBRARY_OUTPUT_PATH是全局变量)
+#set(LIBRARY_OUTPUT_PATH [output_path])
+
+#设置c++编译参数（CMAKE_CXX_FLAGS是全局变量）
+#set(CMAKE_CXX_FLAGS "-Wall std=c++11")
+
+#设置源文件集合(SOURCE_FILES是本地变量即自定义变量)
+#set(SOURCE_FILES main.cpp test.cpp ... )
+
+
+
+include_directories(src/main/cpp)#设置头文件路径
+include_directories(src/main/cpp/include)#设置头文件路径
 if (${CMAKE_ANDROID_ARCH_ABI} MATCHES "armeabi-v7a")
     include_directories(src/main/cpp/include/armeabi-v7a)
     message("This is armeabi-v7a")
@@ -76,4 +90,4 @@ target_link_libraries( # Specifies the target library.
         -lOpenSLES #openSLES
         # Links the target library to the log library
         # included in the NDK.
-        ${log-lib})
+        ${log-lib})#将若干库连接到目标库文件

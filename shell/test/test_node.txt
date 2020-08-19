@@ -1,0 +1,71 @@
+--sysroot=XX
+    使用xx作为这一次编译的头文件与库文件的查找目录，查找下面的 usr/include usr/lib目录
+-isysroot XX
+    头文件查找目录,覆盖--sysroot ，查找 XX/usr/include
+-isystem XX
+    指定头文件查找路径（直接查找根目录）
+-IXX
+    头文件查找目录
+优先级：
+    -I -> -isystem -> sysroot
+    
+-LXX
+    指定库文件查找目录
+-lxx.so
+    指定需要链接的库名
+
+查找 目录1/usr/lib 的库文件
+目录2 /usr/include 的头文件	
+还去查找 目录3 下的头文件
+还去查找 目录4 下的头文件
+gcc --sysroot=目录1 -isysroot 目录2 -isystem 目录3 -I目录4  main.c
+
+gcc -L目录1 -l库名
+
+javac -classpath xxx
+
+例子： 链接ndk的日志库
+gcc -LC:\Users\Administrator\AppData\Local\Android\Sdk\ndk-bundle\platforms\android-21\arch-arm\usr\lib
+-llog  -lGLESv2
+
+gcc --sysroot=C:\Users\Administrator\AppData\Local\Android\Sdk\ndk-bundle\platforms\android-21\arch-arm
+-llog -lGLESv2
+
+
+
+$CC --sysroot=ND/platforms/android-21/arch-arm -isystem NDK\sysroot\usr\include 
+-isystem NDK\sysroot\usr\include\arm-linux-androideabi
+
+export AAA="--sysroot=/root/android-ndk-r17b/platforms/android-21/arch-arm -isystem /root/android-ndk-r17b/sysroot/usr/include  -isystem /root/android-ndk-r17b/sysroot/usr/include/arm-linux-androideabi
+
+
+
+
+链接静态库
+a.a => test
+source.c(test1)  => source.a    
+source.a里面就拥有test+test1 
+编译时就将所有符号加入到 输出的库
+
+
+链接动态库
+a.so => test
+source.c(test1) => source.a  
+source.a里面就拥有test1 
+运行时候动态加载 a.so 
+
+
+
+第三方库 的 android 使用 2种方式
+1、 直接编译出so  （相当于打一个jar包） 
+	编译一次就行了
+	
+2、 把所有源文件放到as里面 
+	方便调试与修改
+
+ffmpeg？
+以2来使用： 1、编译周期N久 
+			2、cmakelist.txt、android.mk 写一大堆，而且还不知道怎么写
+			（完全读懂它的configuration以及生成的makefile）
+
+

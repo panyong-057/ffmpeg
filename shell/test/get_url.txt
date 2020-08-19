@@ -1,0 +1,31 @@
+
+cate:类别 
+cate=lol : 英雄联盟
+cate=acg 二次元
+cate=food 美食
+
+更多分类：
+https://www.panda.tv/cate?pdt=1.18.pheader-n.2.7prrbrd3cgd
+
+http://api.m.panda.tv/ajax_get_live_list_by_cate?cate=lol&pageno=1&pagenum=1&room=1&version=3.3.1.5978
+获得lol类别的房间
+
+{"errno":0,"errmsg":"","data":{"items":[{"id":"237908","name":"\u8001\u5218\uff1a\u5218\u83b1\u5384\u65af\u6e29\u9152\u65a9\u4e0a\u5355\uff01\u6781\u96501V9","hostid":"24872350","person_num":"211986","classification":{"cname":"\u82f1\u96c4\u8054\u76df","ename":"lol"},"pictures":{"img":"http:\/\/i8.pdim.gs\/90\/2833bd6763a56b25229883dc29c1c505\/w338\/h190.jpg"},"display_type":"1","tag":"","tag_switch":"0","tag_color":"3","style_type":"1","reliable":"1","status":"2","stream_status":"1","createtime":"2015-12-30 04:44:08","start_time":"1535936417","schedule":"1457226000","room_type":"1","lianmai":"3","host_level_info":"{\"val\":4921.297889,\"c_lv\":13,\"c_lv_val\":4161,\"n_lv\":14,\"n_lv_val\":5180,\"plays_day\":1293,\"bamboo_user\":183.230062,\"gift_user\":1519.130498,\"gift_cnt\":1925.965104,\"vip\":0}","top_icon":"0","label":[{"cname":"\u8054\u76df\u7cbe\u82f1","color":"5","ename":"lmjy"}],"room_key":"a565062faa92b2497fba298df9fc22ac","rollinfo":["quiz"],"fans":"0","userinfo":{"rid":24872350,"userName":"","nickName":"\u65cb\u8f6c\u7684\u8001\u5218\u8bfa\u624b","avatar":"http:\/\/i7.pdim.gs\/2edfc92b52d03d3979d0b7d2dceeebd5.jpeg"},"announcement":"","duration":"9615","click_trace":"list","room_activity":{"type":"5","value":"\u7ade\u731c"},"definition_option":{"HD":"1","OD":"1","SD":"1"},"xy_stat":"0","tx_stat":"0","hardware":"2","decoder":{"HD":"","OD":"","SD":""}}],"total":"285","type":{"ename":"lol","cname":"\u82f1\u96c4\u8054\u76df"},"liveswitch":0},"authseq":""}
+
+
+
+
+http://api.m.panda.tv/ajax_get_liveroom_baseinfo?roomid=237908&__version=3.3.1.5978&slaveflag=1&type=json&__plat=android
+roomid  第一个请求地址获得的json中的id
+
+
+{"errno":0,"errmsg":"","data":{"info":{"hostinfo":{"rid":24872350,"name":"\u65cb\u8f6c\u7684\u8001\u5218\u8bfa\u624b","avatar":"http:\/\/i7.pdim.gs\/dmfd\/200_200_100\/2edfc92b52d03d3979d0b7d2dceeebd5.jpeg","bamboos":"389019586","level":{"val":4921.328189,"c_lv":13,"c_lv_val":4161,"n_lv":14,"n_lv_val":5180,"plays_day":1293,"bamboo_user":183.230062,"gift_user":1519.130498,"gift_cnt":1925.967629,"vip":0},"qq":{"list":[{"qq":"517509252","description":"\u8001\u5218\u8bfa\u624b\u96c6\u4e2d\u247b\u8425","url":"https:\/\/jq.qq.com\/?_wv=1027&k=56TUN1o","opttime":1535080016}],"count":1}},"roominfo":{"id":"237908","name":"\u8001\u5218\uff1a\u5218\u83b1\u5384\u65af\u6e29\u9152\u65a9\u4e0a\u5355\uff01\u6781\u96501V9","type":"1","classification":"\u82f1\u96c4\u8054\u76df","cate":"lol","bulletin":"\u76f4\u64ad\u65f6\u95f4\uff1a9.00-2.00\uff0c\u65b0\u6d6a\u5fae\u535a\uff1a\u65cb\u8f6c\u7684\u8001\u5218\u8bfa\u624b\uff0c\u5929\u8d4b\u7b26\u6587\u90fd\u5728\u91cc\u9762\uff0c\u6ca1\u4e8b\u79c1\u4fe1\u91cc\u9762\u62bd\u5956\u6253\uff01\u8054\u7cfb\u4e3b\u64ad\u52a0\u7fa4\u8054\u7cfb\u7fa4\u4e3b","details":"","person_num":"359640","fans":"660823","pictures":{"img":"http:\/\/i7.pdim.gs\/90\/67a5ebb3a216498ff1286bfbc2bcf412\/w338\/h190.jpg"},"display_type":"1","start_time":"1535936417","end_time":"1535867259","room_type":"1","status":"2","style_type":"1","banned_reason":"\u8fdd\u53cd\u300a\u718a\u732b\u76f4\u64ad\u4e3b\u64ad\u4fe1\u7528\u503c\u5206\u7ea7\u7ba1\u7406\u529e\u6cd5\u300b\u7b2c76\u6761","unlock_time":"1528868625","pk_stat":1,"ngif_switch":"0","remind_content":"","remind_time":"0","remind_status":"0","payBarrageSwitch":"1","cosmicwarSwtich":"0","videojjSwitch":1,"gmpk_stat":0,"is_have_short":"1"},"userinfo":{"rid":0,"ispay":false},"videoinfo":{"name":"dota","time":"10547","stream_addr":{"HD":"1","OD":"1","SD":"1"},"room_key":"a565062faa92b2497fba298df9fc22ac","plflag":"2_3","status":"2","sign":"974067f67e93a6411f5b9d44c6d3c5e8","ts":"&ts=5b8cb0d4&rid=-62409061","hardware":0,"scheme":"http","main":"2_3","xy_stat":"1","tx_stat":"1","ws_stat":"1","kcg_stat":"1","decoder":{"HD":"","OD":"","SD":""},"slaveflag":["14_29"],"p2pconf":[{"14_28":"xy"},{"14_29":"xy"},{"2_3":"xy"},{"2_4":"xy"},{"4_8":"xy"},{"4_7":"xy"},{"15_31":"xy"},{"15_30":"xy"}],"watermark":0},"tabinfo":[{"tab_id":"station","label_cname":"\u8f66\u7ad9","tab_rank":"3","is_default_click":0,"link":"https:\/\/medusa.m.panda.tv\/station.html?roomid=237908&hostid=24872350&hostname=%E6%97%8B%E8%BD%AC%E7%9A%84%E8%80%81%E5%88%98%E8%AF%BA%E6%89%8B"}],"skininfo":[],"groupinfo":{"groupid":"101317","name":"\u90d1\u5dde\u5927\u5b66","sp_name":"\u90d1\u5927"}}},"authseq":""}
+
+
+http://pl3.live.panda.tv/live_panda/a565062faa92b2497fba298df9fc22ac_mid.flv?sign=974067f67e93a6411f5b9d44c6d3c5e8&time=&ts=5b8cae1e&rid=-62264111
+
+a565062faa92b2497fba298df9fc22ac: room_key
+
+974067f67e93a6411f5b9d44c6d3c5e8: sign
+
+time=后面拼上ts     &ts=5b8cb0d4&rid=-62409061
